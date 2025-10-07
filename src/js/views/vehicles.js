@@ -12,7 +12,7 @@ export const Vehicles = () => {
 
     return (
         <div className="container">
-            <h1 className="d-flex justify-content-start text-primary">Vehicles</h1><br></br>
+            <h1 className="d-flex justify-content-start text-warning">Vehicles</h1><br></br>
             <div className="row row-cols-1 row-cols-md-3 g-4 d-flex flex-row flex-nowrap overflow-auto">
                 {store.vehicles.map((v, index) => {
                     const vehicleImage = `https://starwars-visualguide.com/assets/img/vehicles/${v.uid}.jpg`
@@ -25,11 +25,11 @@ export const Vehicles = () => {
                                     <h5 className="card-title">{v.name}</h5>
                                     <p className="card-text"></p>
                                 </div>
-                                <div className="card-footer d-flex justify-content-between">
+                                <div className="card-footer d-flex justify-content-between bg-secondary">
                                     <Link to={`/VehicleLearnMore/${v.uid}`}>
-                                        <button type="button" className="btn btn-outline-primary">Learn more</button>
+                                        <button type="button" className="btn btn-outline-warning">Learn more</button>
                                     </Link>
-                                    <button type="button" className="btn btn-outline-primary" onClick={() => handleFavourite(v.name)}><i className="fa-regular fa-heart"></i></button>
+                                    <button type="button" className="btn btn-outline-danger" onClick={() => handleFavourite(v.name)}><i className="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
                         </div>

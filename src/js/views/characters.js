@@ -13,7 +13,7 @@ export const Characters = () => {
 
     return (
         <div className="container">
-            <h1 className="d-flex justify-content-start text-primary">Characters</h1><br></br>
+            <h1 className="d-flex justify-content-start text-warning">Characters</h1><br></br>
             <div className="row row-cols-1 row-cols-md-3 g-4 d-flex flex-row flex-nowrap overflow-auto">
                 {store.characters.map((c, index) => {
                     const characterImage = ``;
@@ -26,11 +26,11 @@ export const Characters = () => {
                                     <h5 className="card-title">{c.name}</h5>
                                     <p className="card-text"></p>
                                 </div>
-                                <div className="card-footer d-flex justify-content-between">
+                                <div className="card-footer d-flex justify-content-between bg-secondary">
                                     <Link to={`/CharacterLearnMore/${c.uid}`}>
-                                        <button type="button" className="btn btn-outline-primary">Learn more</button>
+                                        <button type="button" className="btn btn-outline-warning">Learn more</button>
                                     </Link>
-                                    <button type="button" className="btn btn-outline-primary" onClick={() => handleFavourite(c.name)}><i className="fa-regular fa-heart"></i></button>
+                                    <button type="button" className="btn btn-outline-danger" onClick={() => handleFavourite(c.name)}><i className="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
                         </div>

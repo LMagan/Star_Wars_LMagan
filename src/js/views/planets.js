@@ -13,7 +13,7 @@ export const Planets = () => {
 
     return (
         <div className="container">
-            <h1 className="d-flex justify-content-start text-primary">Planets</h1><br></br>
+            <h1 className="d-flex justify-content-start text-warning">Planets</h1><br></br>
             <div className="row row-cols-1 row-cols-md-3 g-4 d-flex flex-row flex-nowrap overflow-auto">
                 {store.planets.map((p, index) => {
                     const planetImage = ``
@@ -25,11 +25,11 @@ export const Planets = () => {
                                     <h5 className="card-title">{p.name}</h5>
                                     <p className="card-text"></p>
                                 </div>
-                                <div className="card-footer d-flex justify-content-between">
+                                <div className="card-footer d-flex justify-content-between bg-secondary">
                                     <Link to={`/PlanetLearnMore/${p.uid}`}>
-                                        <button type="button" className="btn btn-outline-primary">Learn more</button>
+                                        <button type="button" className="btn btn-outline-warning">Learn more</button>
                                     </Link>
-                                    <button type="button" className="btn btn-outline-primary" onClick={() => handleFavourite(p.name)}><i className="fa-regular fa-heart"></i></button>
+                                    <button type="button" className="btn btn-outline-danger" onClick={() => handleFavourite(p.name)}><i className="fa-regular fa-heart"></i></button>
                                 </div>
                             </div>
                         </div>
